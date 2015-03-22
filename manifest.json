@@ -1,0 +1,34 @@
+{
+    "name" : "hellochrome",
+    "version" : "1.0",
+    "manifest_version" : 2,
+
+    "icons":
+    {
+        "128" : "icon.PNG"
+    },
+
+    "permissions" : [ 
+        "tabs", 
+        "notifications"
+        ],
+
+    "description" : "Hello",
+    
+    "browser_action" :
+    {
+        "default_icon" : "icon.PNG",
+        "default_popup" : "popup.html"
+    },
+
+    "content_scripts":[
+     {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["content.js","jquery.js"]
+     }
+    ],
+
+    "background": {
+        "scripts": ["background.js"]
+    }
+}
