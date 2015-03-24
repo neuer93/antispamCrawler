@@ -4,4 +4,10 @@ window.onload = function() {
             type: "quickComment"
         });
     };
+
+    document.getElementById("openTabsButton").onclick = function() {
+        chrome.runtime.sendMessage({
+            type: "opentabs"
+        });
+    };
 }
