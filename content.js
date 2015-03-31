@@ -24,13 +24,13 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
                 score3 = $('.td-div-refinedScore3');
                 price  = $('.td-div-avgPrice');
                 for(var j = 0; j < list.length; ++ j){
-                    outStr += (i * 15 + j + 1) + "       " + $(list[j]).text()
-                        + "  " + $(".J_shopName:eq(" + j + ")").attr("href").split('/').pop()
-                        + "  " + $(areaList[j]).text()
-                        + "  " + $(score1[j]).text()
-                        + "  " + $(score2[j]).text()
-                        + "  " + $(score3[j]).text()
-                        + "  " + $(price[j]).text()
+                    outStr += (i * 15 + j + 1) + "," + $(list[j]).text()
+                        + "," + $(".J_shopName:eq(" + j + ")").attr("href").split('/').pop()
+                        + "," + $(areaList[j]).text()
+                        + "," + $(score1[j]).text()
+                        + "," + $(score2[j]).text()
+                        + "," + $(score3[j]).text()
+                        + "," + $(price[j]).text()
                         + "\n";
 //                    console.log(i * 15 + j + 1);
   //                  console.log($(list[j]).text());
